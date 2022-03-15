@@ -1,7 +1,7 @@
 #pragma once
-#include "DateH.h"
 #include <iostream>
-#include "mad.h"
+#include "DateH.h"
+#include "Devise.h"
 using namespace std;
 
 class Operation  {
@@ -9,10 +9,11 @@ class Operation  {
     int numop;
     static int cpt;
     DateH date;
-    mad montant;
+    Devise montant;
     string lib;
+    
     public: 
-    Operation(mad m,DateH dt,string lb);
+    Operation(Devise m,DateH dt,string lb);
     void display()const;
     ~Operation();
 }
