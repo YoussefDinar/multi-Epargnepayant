@@ -6,13 +6,13 @@
 
 
 using namespace std;
-class CpEpargne_payant : public CompteEpargne, public ComptePayant
+class CompteEpargne_payant : public CompteEpargne, public ComptePayant
 {
 public:
-	CpEpargne_payant(Client* cl, Devise*dev, double tx);
+	CompteEpargne_payant(Client* cl, Devise*dev, double tx);
 	bool retirerArgent(Devise mt)override;
 	void deposerArgent(Devise mt)override;
-	~CpEpargne_payant();
+	~CompteEpargne_payant();
 
 };
 
