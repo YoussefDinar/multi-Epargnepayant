@@ -1,4 +1,4 @@
-#include "CpEpargne_pay.h"
+#include "CpEpargne_payant.h"
 
 CpEpargne_payant::CpEpargne_payant(Client* c, Devise* d, double taux):
 	CompteEpargne(c,d,taux), Compte(c,d);
