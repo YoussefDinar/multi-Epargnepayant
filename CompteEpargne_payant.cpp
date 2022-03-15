@@ -16,6 +16,7 @@ void CompteEpargne_payant::deposerArgent(Devise mont)
  }
 
 
-CompteEpargne_payant::~CpEpargne_payant()
+CompteEpargne_payant::~CompteEpargne_payant()
 {
+ std::cout<<"destructeur Compte Epargne payant"<<std::endl;
 }
