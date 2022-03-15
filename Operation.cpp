@@ -1,11 +1,12 @@
-#include"Operation.h"
+
 #include<iostream>
+#include"Operation.h"
 #include "DateH.h"
-#include "mad.h"
+#include "Devise.h"
 
 int Operation::cpt = 0;
 
-Operation::Operation(mad md,DateH dt,string lb)
+Operation::Operation(Devise md,DateH dt,string lb)
 {
  this->numop= ++Operation::cpt;
 this->date=dt;
