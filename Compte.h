@@ -7,18 +7,19 @@ using namespace std;
 class Compte
 {
 public:
-	Compte();
-	Compte(Client* Prop, Devise *solde);
-	virtual bool transfererArget(Compte*c, Devise montant)=0;
-	virtual void consultersolde() const;
-	virtual void deposerArgent(Devise montant);
-	virtual bool retirerArgent(Devise montant);
-	Devise CalculIteret(double taux) const;
-	bool checkSolde(Devise* dec, Devise montant)const; 
-	~Compte();
+    Compte();
+    Compte(Client* Prop, Devise solde);
+    virtual bool transfererArgent(Compte* c, Devise montant) ;
+    virtual void consultersolde() const;
+    virtual void deposerArgent(Devise montant);
+    virtual bool retirerArgent(Devise montant);
+    void CalculIteret(Devise taux);
+    bool checkSolde(Devise montant);
+    ~Compte();
 private:
-	const int numCompte;
-	static int cpt;
-	Client *Proprietaire;
-    Devise *solde; 
+    const int numCompte;
+    static int cpt;
+    Client* Proprietaire;
+    Devise solde;
+    vector<Operation* > historique;
 };
