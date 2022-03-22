@@ -15,10 +15,13 @@ this->lib=lb;
 
 }
 
-
-
-void Operation::display()const{
-cout<<this->date<<"||"<<this->numop<<"||"<<this->montant<<"||"<<this->lib<<endl;
+void Operation::display()const {
+    this->date.print();
+    cout << "||";
+    cout << this->numop << "||";
+    this->montant;
+    cout << "||";
+    cout << this->lib << endl;
 }
 
 Operation::~Operation(){
