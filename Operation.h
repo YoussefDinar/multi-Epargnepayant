@@ -4,16 +4,19 @@
 #include "Devise.h"
 using namespace std;
 
-class Operation  {
-    private:
+
+class Operation {
+private:
     int numop;
     static int cpt;
-    DateH date;
+    //DateH date;
     Devise montant;
     string lib;
+
+public:
+      Operation(Devise m, string lb);
+   // Operation(Devise m, DateH dt, string lb);
     
-    public: 
-    Operation(Devise m,DateH dt,string lb);
     void display()const;
     ~Operation();
-}
+};
