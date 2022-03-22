@@ -15,22 +15,36 @@ Devise& Devise::operator-=(const Devise& d2)
 {
 	this->valeur -= d2.valeur;
 	return *this;
-	// TODO: ins�rer une instruction return ici
+	
 }
 
-Devise& Devise::operator-(const Devise& d2)
+Devise Devise::operator-(const Devise& d2)
 {
 	Devise res(this->valeur - d2.valeur); // constructeur avec parametres
 	return res;
+}
+
+Devise Devise::operator+( Devise& d2)
+{
+    Devise res(this->valeur + d2.valeur); // constructeur avec parametres
+    return res;
 }
 
 bool Devise::operator>=(Devise& D) const
 {
 	return (this->valeur >= D.valeur) ? true :false;
 }
-
+Devise Devise::operator/(double val)
+{
+    return this->valeur / val;
+}
 Devise Devise::operator*(Devise& D)
 {
 	this->valeur = this->valeur * D.valeur;
 	return *this;
+}
+Devise Devise::operator*(double D)
+{
+    this->valeur = this->valeur * D;
+    return *this;
 }
