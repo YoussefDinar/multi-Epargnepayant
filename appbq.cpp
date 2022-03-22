@@ -4,16 +4,17 @@ Appbq::Appbq()
 	this->TC = vector<Compte*>();
 }
 
-Appbq::~Appbq()
-{
-	this->TC.clear();
-}
 
 void Appbq::Addacc(Compte* c)
 {
 	this->TC.push_back(c);
 }
 
+
+Compte& Appbq::operator[](int i)
+{
+	return *this->TC[i];
+}
 void Appbq::afficher() const
 {
 	for (int i = 0; i < this->TC.size(); i++)
@@ -25,7 +26,7 @@ void Appbq::afficher() const
 
 }
 
-Compte& Appbq::operator[](int i)
+Appbq::~Appbq()
 {
-	return *this->TC[i];
+	this->TC.clear();
 }
