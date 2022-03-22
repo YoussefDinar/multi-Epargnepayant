@@ -12,6 +12,8 @@ public:
     ComptePayant();
     bool retirerArgent(Devise montant);
     void deposerArgent(Devise montant);
+   
+    
     ~ComptePayant();
 private:
     double taux;
