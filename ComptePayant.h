@@ -12,6 +12,10 @@ class ComptePayant : public Compte
 ComptePayant();
 bool retirerArgent(Devise montant)override;
 void deposerArgent(Devise montant)override;
- ~ComptePayant();    
+ ~ComptePayant();   
+ 
+ private:
+ double taux;
+ 
 };
 
