@@ -6,16 +6,13 @@
 #include <vector>
 
 
-class ComptePayant : public Compte
- {
-    public:
-ComptePayant();
-bool retirerArgent(Devise montant)override;
-void deposerArgent(Devise montant)override;
- ~ComptePayant();   
- 
- private:
- double taux;
- 
+class ComptePayant : public virtual Compte
+{
+public:
+    ComptePayant();
+    bool retirerArgent(Devise montant);
+    void deposerArgent(Devise montant);
+    ~ComptePayant();
+private:
+    double taux;
 };
-
