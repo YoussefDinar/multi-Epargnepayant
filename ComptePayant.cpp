@@ -4,19 +4,20 @@
 
 ComptePayant::ComptePayant()            
     {
+      this->taux = 0.05;
     }
 
 bool ComptePayant::retirerArgent(Devise montant){
-
-this->Compte::retirerArgent(montant);
-this->Compte::retirerArgent(montant*0.05);
+    
+    Devise d = (montant * (this->taux / 100.00));
+    this->Compte::retirerArgent(d.operator+(montant));
 
 }
 
 void ComptePayant::deposerArgent(Devise montant)
  {
- this->Compte::deposerArgent(montant);
-this->Compte::retirerArgent(montant*0.05);
+ Devise d = (montant * (taux / 100));
+    this->Compte::retirerArgent((montant.operator-(d)));
 
  }
 
