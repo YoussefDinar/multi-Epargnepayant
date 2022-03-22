@@ -14,9 +14,9 @@ CompteEpargne::CompteEpargne(Client* c, Devise* s, double taux)
     this->TauxInteret = taux;
 
 }
+
 void CompteEpargne::Calcul_TauxInteret()
 {
-    Devise res = this->CalculIteret(this->TauxInteret);
-    this->deposerArgent(res);
-}
+  this->Compte::CalculIteret(this->TauxInteret);
 
+}
