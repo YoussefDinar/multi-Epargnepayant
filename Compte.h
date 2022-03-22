@@ -1,8 +1,8 @@
 #pragma once
 #include<iostream>
 #include"Client.h"
-//#include"Devise.h"
-class Devise; // pr�-declaration 
+#include"Devise.h"
+
 using namespace std;
 class Compte
 {
