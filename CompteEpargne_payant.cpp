@@ -13,19 +13,12 @@ CompteEpargne_payant::CompteEpargne_payant()
 
 
 bool CompteEpargne_payant::retirerArgent(Devise mont) {
-     
-    this->CompteEpargne::retirerArgent(mont);
+     if (this->CompteEpargne::retirerArgent(mont))
+    return this->ComptePayant::retirerArgent(mont);
 
 }
 
-void CompteEpargne_payant::deposerArgent(Devise mont)
-{
-   
-     
-    this->CompteEpargne::deposerArgent(mont);
-   
 
-}
 
 
 void CompteEpargne_payant::consultersolde() const
