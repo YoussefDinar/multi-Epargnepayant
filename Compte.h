@@ -20,6 +20,8 @@ private:
     const int numCompte;
     static int cpt;
     Client* Proprietaire;
-    Devise solde;
+    
     vector<Operation* > historique;
+    protected:
+    Devise solde;
 };
