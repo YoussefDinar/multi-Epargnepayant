@@ -7,7 +7,7 @@ CompteEpargne::CompteEpargne()
 
 }
 
-CompteEpargne::CompteEpargne(Client* c, Devise* s, double taux)
+CompteEpargne::CompteEpargne(Client* c, Devise s, double taux)
     : Compte(c,s)
 {
     assert(taux >= 0 && taux <= 100);
@@ -17,8 +17,8 @@ CompteEpargne::CompteEpargne(Client* c, Devise* s, double taux)
 
 void CompteEpargne::Calcul_TauxInteret()
 {
- Devise taux= this->Compte::CalculIteret(this->TauxInteret);
-     this->deposerArgent(taux);
+  this->Compte::CalculIteret(this->TauxInteret);
+   //  this->deposerArgent(taux);
 
 }
 
