@@ -2,6 +2,12 @@
 #include"Devise.h"
 #include <iostream>
 
+ComptePayant::ComptePayant(Client* prop, Devise solde, double taux)
+	:Compte(prop,solde)
+{
+	this->taux = taux;
+}        
+
 ComptePayant::ComptePayant()
 {
     this->taux = 0.05;
@@ -9,14 +15,14 @@ ComptePayant::ComptePayant()
 
 bool ComptePayant::retirerArgent(Devise montant) {
   
-       Devise d = (montant * (this->taux*10));
+       Devise d = (montant * (this->taux/100));
     this->Compte::retirerArgent(d.operator+(montant));
        
 }
 
 void ComptePayant::deposerArgent(Devise montant)
 {
-   Devise d = (montant * (taux *10));
+   Devise d = (montant * (taux*100));
    this->Compte::deposerArgent((montant.operator+(d)));
 
 }
