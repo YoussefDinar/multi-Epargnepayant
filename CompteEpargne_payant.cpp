@@ -5,6 +5,13 @@ CompteEpargne_payant::CompteEpargne_payant(Client* cl, Devise dev, double dc)
 {
 }
 
+CompteEpargne_payant::CompteEpargne_payant()
+{
+  
+}
+
+
+
 bool CompteEpargne_payant::retirerArgent(Devise mont) {
      
     this->CompteEpargne::retirerArgent(mont);
